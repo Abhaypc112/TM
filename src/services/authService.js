@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-export const doSignup = async ({email,password}) => {
-    console.log(signupdata,"data")
-    const res = await axios.post('https://reqres.in/api/register',{signupdata});
+export const doSignup = async (signupData) => {
+    const res = await axios.post('https://reqres.in/api/register',signupData);
     return res.data;
 }
 export const doSignin = async (signindata) => {

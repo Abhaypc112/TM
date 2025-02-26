@@ -15,9 +15,9 @@ const Navbar = () => {
         <h1 className='font-bold text-4xl'>TM</h1>
         {
           token ? (
-            <button onClick={handleOnclick} className='bg-black text-white font-bold p-1 rounded-md px-2 text-sm'>Sign Out</button>
+            <button onClick={handleOnclick} className='bg-black text-white font-bold p-1 rounded px-2 text-sm'>Sign Out</button>
           ):(
-            <button onClick={()=>navigate('/signin')} className='bg-black text-white font-bold p-1 rounded-md px-2 text-sm'>Sign In</button>
+            <button onClick={()=>navigate('/signin')} className='bg-black text-white font-bold p-1 rounded px-2 text-sm'>Sign In</button>
           )
         }
       </div>
