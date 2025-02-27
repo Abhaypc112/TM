@@ -11,7 +11,7 @@ const Navbar = () => {
   }
   return (
     <div>
-      <div className='w-[100%] shadow-md h-[5rem] flex justify-between items-center px-3 fixed'>
+      <div className='w-[100%] shadow-md h-[5rem] flex justify-between items-center px-3 fixed z-10 bg-white'>
         <h1 className='font-bold text-4xl'>TM</h1>
         {
           token ? (
