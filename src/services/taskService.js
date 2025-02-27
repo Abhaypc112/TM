@@ -4,9 +4,13 @@ export const addTask = async (taskData) => {
     const res = await axios.post('https://jsonplaceholder.typicode.com/todos',taskData);
     return res.data;
 }
-export const getAllTasks = async (userId) => {
+export const getAllTasks = async (data) => {
+    const {userId,page,limit} = data;
     const res = await axios.get(`https://jsonplaceholder.typicode.com/todos?userId=${userId}`);
-    return res.data;
+    const tasks = res.data;
+    const startIndex = (page - 1) * limit;
+    const paginatedTasks = tasks.slice(startIndex, startIndex + limit);
+    return paginatedTasks;
 }
 export const updateTask = async (taskData) => {
     const res = await axios.put(`https://jsonplaceholder.typicode.com/todos/${taskData.id}`,taskData);

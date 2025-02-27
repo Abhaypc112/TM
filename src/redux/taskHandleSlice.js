@@ -12,9 +12,9 @@ export const addTask = createAsyncThunk('add/task',async(taskData)=>{
     console.log(error)
    }
 })
-export const getAllTasks = createAsyncThunk('api/data',async(taskData)=>{
+export const getAllTasks = createAsyncThunk('api/data',async({page,limit})=>{
    try{
-    const res = await taskService.getAllTasks(userId);
+    const res = await taskService.getAllTasks({userId,page,limit});
     return res;
    }catch(error){
     console.log(error)
