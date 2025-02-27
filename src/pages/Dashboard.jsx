@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     useEffect(()=>{
         dispatch(getAllTasks())
-    },[])
+    },[filter])
     
     const handleOnSubmit = (values) => {
         dispatch(addTask(values));
