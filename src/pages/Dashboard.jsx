@@ -129,7 +129,7 @@ const Dashboard = () => {
                 )
             })
         }
-      <div className='flex justify-center gap-10'>
+      <div className='flex justify-center gap-10 items-center'>
         <button disabled={page === 1} className='bg-slate-300 p-1 px-2 rounded' onClick={() => setPage(page - 1)}>Prev</button>
         <span>{page}</span>
         <button disabled={tasks.length === 0} className='bg-slate-300 p-1 px-2 rounded' onClick={() => setPage(page + 1)}>Next</button>
